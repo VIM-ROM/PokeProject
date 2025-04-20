@@ -22,4 +22,11 @@ public class Access {
     @Column(name = "client_ip", length = 100)
     private String clientIp;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pokemon")
+    private Pokemon pokemon;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_name")
+    private Usuario usuario;
 }
