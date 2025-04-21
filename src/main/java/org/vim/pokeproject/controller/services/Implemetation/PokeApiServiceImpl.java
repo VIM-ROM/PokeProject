@@ -19,12 +19,11 @@ import org.vim.pokeproject.controller.services.PokeApiService;
 @Service
 public class PokeApiServiceImpl implements PokeApiService {
     private static final String BASE_POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/";
-    private static final String BASE_SPECIES_URL = "https://pokeapi.co/api/v2/pokemon-species/";
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
 
     public EvolutionResponse getEvolutionChain(EvolutionRequest request){
-        JsonNode pokemonNode = fetchJson(BASE_POKEMON_URL + request.getPokemonId() + ".json");
+        JsonNode pokemonNode = fetchJson(BASE_POKEMON_URL + request.getPokemonId());
         String pokemonName = pokemonNode.get("name").asText();
 
         String speciesUrl = pokemonNode.get("species").get("url").asText();
