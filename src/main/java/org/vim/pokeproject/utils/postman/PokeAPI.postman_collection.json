@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "86919c21-5e01-48a5-ac60-266368c8b521",
+		"name": "PokeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44231119",
+		"_collection_link": "https://vimrom-9469635.postman.co/workspace/vimrom's-Workspace~615eb667-54bd-4b5f-8828-52e0b644beaa/collection/44231119-86919c21-5e01-48a5-ac60-266368c8b521?action=share&source=collection_link&creator=44231119"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"pokemonId\":2, \"userName\":\"VaneRomero\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/evolutions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"evolutions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

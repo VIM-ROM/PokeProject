@@ -6,4 +6,5 @@ import org.vim.pokeproject.model.entity.Pokemon;
 
 @Repository
 public interface PokemonRepository extends JpaRepository <Pokemon, Integer>{
+    Pokemon findByName(String name);
 }

@@ -6,4 +6,5 @@ import org.vim.pokeproject.model.entity.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository <Usuario, Integer> {
+    Usuario findByName(String name);
 }
